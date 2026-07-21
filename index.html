@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elephant Track Defense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <div>
+        <p class="eyebrow">FOUNDRY SECTOR 07</p>
+        <h1>ELEPHANT TRACK <span>DEFENSE</span></h1>
+      </div>
+      <div class="stats" aria-label="Game status">
+        <button id="pauseGame" class="pause-button">PAUSE</button>
+        <button id="openEncyclopedia" class="encyclopedia-button">ORB DICTIONARY</button>
+        <button id="openAchievements" class="achievements-button">ACHIEVEMENTS <span id="achievementCount">0/11</span></button>
+        <button id="replayTutorial" class="help-button">REPLAY TUTORIAL</button>
+        <div id="currencyStat" class="stat"><span class="icon">●</span><div><small>METAL</small><strong id="currency">100</strong></div></div>
+        <div id="healthStat" class="stat health-stat"><span class="health-icon">♥</span><div><strong>Health: <span id="currentHealth">100</span> / <span id="maximumHealth">100</span></strong><div class="health-track"><i id="healthFill"></i></div></div><em id="healthDamage" class="health-damage"></em></div>
+        <div class="stat"><span class="wave-icon">≋</span><div><small>WAVE</small><strong id="wave">1 / 50</strong></div></div>
+      </div>
+    </header>
+    <div id="waveCenter" class="wave-center"><strong id="waveCenterLabel">Next Wave: 1 / 50</strong><small id="waveCountdown"></small></div>
+  <div id="pausedLabel" class="paused-label hidden">GAME PAUSED</div>
+  <section id="specialWarning" class="owner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="specialWarningTitle"><div class="owner-window"><h2 id="specialWarningTitle">SPECIAL ORBS INCOMING</h2><div id="specialWarningText"></div><button id="specialWarningContinue" type="button">CONTINUE</button></div></section>
+    <div id="waveRewardNotice" class="wave-reward-notice hidden" aria-live="polite"><strong>Wave Complete!</strong><span>+10 Wave Bonus</span></div>
+
+    <section class="play-area">
+      <div class="canvas-wrap">
+        <canvas id="game" width="1120" height="680" tabindex="0" aria-label="Elephant Track Defense game map"></canvas>
+        <div id="scrollDiscoveryHint" class="scroll-discovery-hint hidden" aria-live="polite"><span>More track below</span><i aria-hidden="true">↓</i></div>
+        <div class="camera-help">SCROLL / W S TO PAN MAP</div>
+        <div id="banner" class="banner hidden"><h2></h2><p></p><button id="bannerRestart">RESTART RUN</button></div>
+      </div>
+
+      <aside>
+        <nav class="side-tabs" aria-label="Tower menu">
+          <button id="shopTab" class="active">SHOP</button>
+          <button id="statsTab" disabled>STATS</button>
+        </nav>
+        <section id="shopPanel">
+          <div class="shop-heading"><div><small>DEPLOYMENT</small><h2>TOWER SHOP</h2></div><span id="shopCount">08</span></div>
+          <button id="buyElephant" class="tower-card">
+            <div class="tower-preview" aria-hidden="true"><div class="mini-elephant">🐘</div><i></i></div>
+            <div class="tower-copy"><strong>WATER ELEPHANT</strong><small>Water spray • Attacks normal orbs</small><div class="price"><span>●</span> <b id="price">100</b></div></div>
+          </button>
+          <button id="buyEyewear" class="tower-card eyewear-card">
+            <div class="tower-preview eyewear-preview" aria-hidden="true"><div class="mini-elephant">🐘</div><span class="mini-glasses"><b></b><b></b></span><i></i></div>
+            <div class="tower-copy"><strong>GHOST SCOUT ELEPHANT</strong><small>Only elephant that can see ghosts</small><div class="price"><span>●</span> <b id="eyewearPrice">125</b></div></div>
+          </button>
+          <button id="buyFoodie" class="tower-card foodie-card">
+            <div class="tower-preview foodie-preview" aria-hidden="true"><div class="mini-elephant">🐘</div><span class="mini-food"><b></b></span><i></i></div>
+            <div class="tower-copy"><strong>FOODIE ELEPHANT</strong><small>Food-lure immune • Strong against food orbs</small><div class="price"><span>●</span> <b id="foodiePrice">150</b></div></div>
+          </button>
+          <button id="buyGasMask" class="tower-card gas-mask-card">
+            <div class="tower-preview gas-mask-preview" aria-hidden="true"><div class="mini-elephant">🐘</div><span class="mini-mask">▣</span><i></i></div>
+            <div class="tower-copy"><strong>GAS MASK ELEPHANT</strong><small>Fume immune • Attacks normal orbs</small><div class="price"><span>●</span> <b id="gasMaskPrice">175</b></div></div>
+          </button>
+          <button id="buyFrost" class="tower-card frost-card" type="button">
+            <div class="tower-preview frost-preview" aria-hidden="true"><div class="mini-elephant frost-elephant">🐘</div><span class="mini-frost-spray">❄</span><span class="mini-snow"><b></b><b></b><b></b></span><i></i></div>
+            <div class="tower-copy"><strong>FROST ELEPHANT</strong><small>Icy spray • Slows orbs • No damage</small><div class="price"><span>●</span> <b id="frostPrice">175</b></div></div>
+          </button>
+          <button id="buySplash" class="tower-card splash-card">
+            <div class="tower-preview splash-preview" aria-hidden="true"><div class="mini-elephant">🐘</div><span class="mini-splash">✦</span><i></i></div>
+            <div class="tower-copy"><strong>SPLASH ELEPHANT</strong><small>Full-range splash • Low damage per orb</small><div class="price"><span>●</span> <b id="splashPrice">200</b></div></div>
+          </button>
+          <button id="buyPapaya" class="tower-card papaya-card">
+            <div class="tower-preview papaya-preview" aria-hidden="true"><div class="mini-papaya">♣</div><i></i></div>
+            <div class="tower-copy"><strong>PAPAYA PLANT</strong><small>Economy • Increases orb income</small><div class="price"><span>●</span> <b id="papayaPrice">100</b></div></div>
+          </button>
+          <button id="buyGoldenPapaya" class="tower-card watermelon-farm-card">
+            <div class="tower-preview watermelon-farm-preview" aria-hidden="true"><div class="mini-watermelon">🍉</div><i></i></div>
+            <div class="tower-copy"><strong>WATERMELON FARM</strong><small>Wave income • Increases wave bonuses</small><div class="price"><span>●</span> <b id="goldenPapayaPrice">125</b></div></div>
+          </button>
+          <div class="unit-limits"><span id="standardElephantCount">Water + Ghost Scout Elephants: 0/15</span><span id="foodieCount">Foodie Elephants: 0/5</span><span id="papayaCount">Papaya Plants: 0/5</span><span id="goldenPapayaCount">Watermelon Farms: 0/1</span><span id="totalUnitCount">Total Units: 0/26</span></div>
+          <div class="papaya-economy"><span>ECONOMY</span><strong id="incomeMultiplier">Income: 1.00×</strong></div>
+          <div id="placementHint" class="placement-hint"><span>+</span><p><strong>BUY &amp; DEPLOY</strong><br>Purchase a Water Elephant, then click valid ground outside the track. Right-click or Esc to cancel.</p></div>
+        </section>
+        <section id="towerStats" class="tower-stats hidden">
+          <div class="stats-title"><div><small id="selectedTypeLabel">SELECTED ELEPHANT</small><h3 id="towerName">WATER ELEPHANT</h3></div><span id="towerLevel" class="level-badge">LEVEL 1/5</span></div>
+          <div class="stat-grid"><p><small id="statOneLabel">DAMAGE</small><strong id="towerDamage">27</strong></p><p><small id="statTwoLabel">ATTACK SPEED</small><strong id="towerAttackSpeed">1.33/s</strong></p><p><small id="statThreeLabel">RANGE</small><strong id="towerRange">155</strong></p></div>
+          <p id="selectionNote" class="selection-note hidden"></p>
+          <div class="upgrade-block">
+            <div><small>NEXT LEVEL</small><p id="upgradePreview">+5% damage • +2% speed • +1.5% range</p></div>
+            <button id="upgradeTower"><span>UPGRADE</span><b id="upgradeCost">● 100</b></button>
+          </div>
+          <div id="targetingControls">
+            <label for="targetMode">TARGET PRIORITY</label>
+            <select id="targetMode">
+              <option value="first">First</option>
+              <option value="last">Last</option>
+              <option value="strong">Most health</option>
+              <option value="weak">Least health</option>
+            </select>
+            <p class="target-help" id="targetHelp">Attacks the ball closest to the endpoint.</p>
+          </div>
+        <button id="sellTower" class="sell-tower">SELL FOR <b id="sellRefund">50</b></button>
+        </section>
+        <div class="legend"><p><i class="valid-dot"></i> Valid ground</p><p><i class="invalid-dot"></i> Track / occupied</p></div>
+        <section class="wave-controls">
+          <div class="auto-row"><div><small>WAVE CONTROL</small><strong>AUTO</strong></div><div class="speed-and-auto"><button id="gameSpeed" class="game-speed">1×</button><label class="auto-toggle"><input id="autoWaves" type="checkbox"><span></span></label></div></div>
+          <label class="start-level-label" for="startLevelSelect">STARTING LEVEL</label>
+          <select id="startLevelSelect" class="start-level-select" aria-label="Starting level"></select>
+          <button id="startWave" class="start-wave"><span>▶</span><div><strong>START LEVEL 1</strong><small id="waveBallCount">10 BALLS</small></div></button>
+          <p id="waveStatus">Deploy your elephant, then launch the first level.</p>
+        </section>
+        <button id="restart" class="restart">↻ &nbsp; RESTART RUN</button>
+        <p class="tip">TIP: Build near corners to cover more of the track.</p>
+      </aside>
+    </section>
+  </main>
+  <div id="encyclopediaNotification" class="encyclopedia-notification" aria-live="polite"></div>
+  <div id="achievementPopup" class="achievement-popup hidden" role="status" aria-live="polite"><span class="achievement-popup-icon">★</span><div><small>ACHIEVEMENT UNLOCKED</small><strong id="achievementPopupName"></strong><em id="achievementPopupReward"></em></div></div>
+  <section id="achievementsModal" class="achievements-modal hidden" role="dialog" aria-modal="true" aria-labelledby="achievementsTitle"><div class="achievements-window"><header class="achievements-header"><div><small>FOUNDRY COMMENDATIONS</small><h2 id="achievementsTitle">ACHIEVEMENTS</h2><p id="achievementsProgress">0 / 11 unlocked</p></div><button id="closeAchievements" aria-label="Close Achievements">×</button></header><div id="achievementsGrid" class="achievements-grid"></div></div></section>
+  <div id="encyclopediaBadge" class="encyclopedia-badge hidden" aria-label="New Orb Dictionary entries">0</div>
+  <section id="tutorialOverlay" class="tutorial-overlay hidden" aria-live="polite">
+    <div id="tutorialSpotlight" class="tutorial-spotlight"></div>
+    <div id="tutorialPlacementMarker" class="tutorial-placement-marker"></div>
+    <div id="tutorialPointer" class="tutorial-pointer">➜</div>
+    <article id="tutorialPanel" class="tutorial-panel">
+      <small id="tutorialProgress">TUTORIAL 1 / 22</small>
+      <h2 id="tutorialTitle">WELCOME TO ELEPHANT TRACK DEFENSE</h2>
+      <p id="tutorialText"></p>
+      <label><input id="tutorialDoNotShow" type="checkbox"> Do not show again</label>
+      <div><button id="tutorialSkip">SKIP TUTORIAL</button><button id="tutorialContinue">CONTINUE</button></div>
+    </article>
+  </section>
+  <section id="encyclopediaModal" class="encyclopedia-modal hidden" role="dialog" aria-modal="true" aria-labelledby="encyclopediaTitle">
+    <div class="encyclopedia-window">
+      <header class="encyclopedia-header"><div><small>FOUNDRY ARCHIVE</small><h2 id="encyclopediaTitle">ORB DICTIONARY</h2><p id="encyclopediaProgress">Orbs Defeated: 0 / 12</p></div><button id="closeEncyclopedia" aria-label="Close Orb Dictionary">×</button></header>
+      <div class="encyclopedia-filters">
+        <select id="encyclopediaCategory" aria-label="Orb category"><option value="all">All categories</option><option value="normal">Normal tiers</option><option value="special">Special orbs</option><option value="boss">Boss orbs</option></select>
+        <select id="encyclopediaTier" aria-label="Tier filter"><option value="all">All tiers</option></select>
+        <label><input id="encyclopediaDiscovered" type="checkbox"> Discovered only</label>
+      </div>
+      <div id="encyclopediaSummary" class="encyclopedia-summary"></div>
+      <div class="encyclopedia-content"><div id="encyclopediaGrid" class="encyclopedia-grid"></div><article id="encyclopediaDetail" class="encyclopedia-detail"><p>Select an orb entry to inspect it.</p></article></div>
+    </div>
+  </section>
+  <section id="ownerCodeModal" class="owner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="ownerCodeTitle">
+    <form id="ownerCodeForm" class="owner-window owner-code-window"><button id="ownerCodeCancel" type="button" class="owner-close" aria-label="Close">×</button><small>PRIVATE INPUT</small><h2 id="ownerCodeTitle">ENTER ACCESS CODE</h2><label for="ownerCodeInput">Code</label><input id="ownerCodeInput" autocomplete="off" spellcheck="false"><p id="ownerCodeMessage" aria-live="polite"></p><button type="submit">CONTINUE</button></form>
+  </section>
+  <section id="ownerPasswordModal" class="owner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="ownerPasswordTitle">
+    <form id="ownerPasswordForm" class="owner-window"><button id="ownerPasswordCancel" type="button" class="owner-close" aria-label="Close">×</button><small>RESTRICTED ACCESS</small><h2 id="ownerPasswordTitle">OWNER VERIFICATION</h2><label for="ownerPasswordInput">Password</label><input id="ownerPasswordInput" type="password" autocomplete="off"><p id="ownerPasswordMessage" aria-live="polite"></p><button type="submit">UNLOCK</button></form>
+  </section>
+  <section id="ownerDebugModal" class="owner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="ownerDebugTitle">
+    <div class="owner-window debug-window"><button id="ownerDebugClose" type="button" class="owner-close" aria-label="Close debug console">×</button><small>PRIVATE TESTING TOOLS</small><h2 id="ownerDebugTitle">OWNER DEBUG CONSOLE</h2><div id="ownerDebugHistory" class="debug-history" aria-live="polite"></div><form id="ownerDebugForm"><input id="ownerDebugInput" autocomplete="off" spellcheck="false" placeholder="Type /help for commands" aria-label="Debug command"><button type="submit">RUN</button></form><p>Type /help for commands</p></div>
+  </section>
+  <button id="floorManage" class="floor-manage" type="button" hidden><b>R</b> REPAIR / FLOOR UPGRADE <small>Repair or reinforce floor</small></button>
+  <script src="orb-progression.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
