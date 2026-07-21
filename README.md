@@ -4,7 +4,7 @@ A browser-based tower-defense game where elephants defend a winding track from i
 
 ## Play
 
-[Play Elephant Track Defense](https://yunzhongwu729.github.io/elephant-track-defense/)
+[Play Elephant Track Defense](https://yunzhongwu729.github.io/Elephant-Track-Defense/)
 
 The game runs entirely in the browser with no backend or installation required.
 
