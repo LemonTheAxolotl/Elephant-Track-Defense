@@ -8,8 +8,6 @@ A browser-based tower-defense game where elephants defend a winding track from i
 
 The game runs entirely in the browser with no backend or installation required.
 
-Game maps, waves, towers, orbs, achievements, tutorials, and difficulties are editable in [`data/`](data/README.md). They are loaded through relative URLs, so the same build works on GitHub Pages without a database.
-
 ## Local development
 
 Serve this directory with any static file server, then open its local URL. JSON loading uses browser `fetch`, matching GitHub Pages deployment behavior.
