@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "difficulties": [
+    {"id":"easy","name":"Easy","nonBossHpMultiplier":0.97,"nonBossSpeedMultiplier":0.98,"elephantFinalDamageMultiplier":1.05,"displayText":"Easy — Orbs have 3% less HP • Move 2% slower • Elephants deal 5% more damage"},
+    {"id":"normal","name":"Normal","nonBossHpMultiplier":1,"nonBossSpeedMultiplier":1,"elephantFinalDamageMultiplier":1,"displayText":"Normal — Standard game balance"},
+    {"id":"hard","name":"Hard","nonBossHpMultiplier":1.03,"nonBossSpeedMultiplier":1.02,"elephantFinalDamageMultiplier":0.93,"displayText":"Hard — Orbs have 3% more HP • Move 2% faster • Elephants deal 7% less damage"}
+  ]
+}
