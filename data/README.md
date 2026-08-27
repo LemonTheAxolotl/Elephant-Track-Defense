@@ -7,7 +7,7 @@ The game loads and validates every file in this folder before `game.js` starts. 
 - `towers.json`: shop entries, prices, placement limits, statistics, upgrades, targeting metadata, and specializations.
 - `achievements.json`: profile achievement text, difficulties, rewards, and declarative unlock conditions.
 - `tutorial.json`: ordered tutorial copy, highlighted UI targets, and required actions.
-- `waves.json`: map-scoped wave sets, Foundry’s 50 wave records/finale, and Frozen Expanse’s explicit 20-wave compositions.
+- `waves.json`: map-scoped wave sets, Foundry’s 50 wave records/finale, and Frozen Expanse’s explicit 50-wave compositions.
 - `difficulties.json`: Easy, Normal, and Hard modifiers and player-facing descriptions.
 
 ## Safely adding content

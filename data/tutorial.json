@@ -7,7 +7,7 @@
     {"id":"tutorial_currency","title":"METAL CURRENCY","text":"Destroy orbs to earn metal currency for towers and upgrades.","highlight":"#currency"},
     {"id":"tutorial_water","title":"WATER ELEPHANT","text":"The Water Elephant is the recommended first purchase because it can defend the track. A Papaya Plant also costs 100, but buying one first is a risky economy strategy because it cannot attack.","highlight":"#buyElephant"},
     {"id":"tutorial_buy","title":"BUY WATER ELEPHANT","text":"Buy a Water Elephant for 100 currency.","highlight":"#buyElephant","requiredAction":"bought"},
-    {"id":"tutorial_valid_ground","title":"CHOOSE VALID GROUND","text":"Place towers outside the track and away from occupied ground.","highlight":"placement"},
+    {"id":"tutorial_valid_ground","title":"CHOOSE VALID GROUND","text":"Select a Shop item, then click or tap valid ground outside the track and away from occupied ground. Click or tap that same selected Shop item again to cancel; select a different Shop item to switch previews.","highlight":"placement"},
     {"id":"tutorial_radius","title":"ATTACK RADIUS","text":"The circle previews attack range. Green is valid and red is blocked.","highlight":"placement"},
     {"id":"tutorial_place","title":"PLACE THE ELEPHANT","text":"Place your Water Elephant here so it can reach the track.","highlight":"placement","requiredAction":"placed"},
     {"id":"tutorial_gift","title":"STARTER GIFT","text":"You received a free starter Water Elephant. The highlighted ground inside the large U bend covers three nearby track sections. It is recommended, but you may place the gift on any valid ground.","highlight":"placement","requiredAction":"starterGiftPlaced"},
