@@ -55,3 +55,18 @@ node game-integration.test.js
 node orb-progression.test.js
 node balance-simulation.test.js
 ```
+
+## Update tracker
+
+The repository includes an automatically generated PDF update tracker at [`docs/update-tracker.pdf`](docs/update-tracker.pdf).
+Refresh it from the current Git history and working tree with:
+
+```sh
+node scripts/update-tracker.mjs
+```
+
+To refresh the tracker after each local commit, enable the tracked hook once:
+
+```sh
+git config core.hooksPath .githooks
+```

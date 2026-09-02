@@ -1,0 +1,679 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 3640 >>
+stream
+q
+0.93 0.95 0.93 rg
+0 760 612 32 re f
+0.29 0.44 0.36 rg
+0 756 612 4 re f
+Q
+BT
+/F2 20 Tf
+0.14 0.19 0.23 rg
+54 720 Td
+(Elephant Track Defense Update Tracker) Tj
+ET
+BT
+/F1 10 Tf
+0.14 0.19 0.23 rg
+54 683 Td
+(Generated: 2026-09-02 15:39:18 UTC) Tj
+ET
+BT
+/F1 10 Tf
+0.14 0.19 0.23 rg
+54 670 Td
+(Branch: main) Tj
+ET
+BT
+/F1 10 Tf
+0.14 0.19 0.23 rg
+54 657 Td
+(HEAD: 7c934a8 \(7c934a830f1c654bfc9345830f8bef0e548c83cb\)) Tj
+ET
+BT
+/F1 10 Tf
+0.14 0.19 0.23 rg
+54 644 Td
+(Remote: https://github.com/LemonTheAxolotl/Elephant-Track-Defense.git) Tj
+ET
+BT
+/F2 14 Tf
+0.14 0.19 0.23 rg
+54 619 Td
+(Current Working Tree) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+68 596 Td
+(Working tree clean) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+54 584 Td
+() Tj
+ET
+BT
+/F2 14 Tf
+0.14 0.19 0.23 rg
+54 567 Td
+(Uncommitted Diff Summary) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+68 544 Td
+(No uncommitted diff) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+54 532 Td
+() Tj
+ET
+BT
+/F2 14 Tf
+0.14 0.19 0.23 rg
+54 515 Td
+(Recent Commits \(40\)) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 492 Td
+(2026-09-02 7c934a8 Add automatic update tracker PDF) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 480 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 465 Td
+(2026-09-02 704f6b3 Update README.md) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 453 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 438 Td
+(2026-09-02 10495ab Add files via upload) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 426 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 411 Td
+(2026-09-02 bb5210b Delete game.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 399 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 384 Td
+(2026-09-02 e28890b Delete difficulty.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 372 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 357 Td
+(2026-09-02 0a476aa Delete index.html) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 345 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 330 Td
+(2026-09-02 5d9201e Delete map-system.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 318 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 303 Td
+(2026-09-02 10f6074 Delete game-integration.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 291 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 276 Td
+(2026-09-02 88df01a Delete data-loader.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 264 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 249 Td
+(2026-09-02 babb299 Add files via upload) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 237 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 222 Td
+(2026-09-02 e462626 Delete data-loader.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 210 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 195 Td
+(2026-09-02 e5da177 Delete difficulty.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 183 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 168 Td
+(2026-09-02 004b6c5 Delete engineer-dig.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 156 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 141 Td
+(2026-09-02 66fff8f Delete finale.css) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 129 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 114 Td
+(2026-09-02 8a44766 Delete flame-elephant.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 102 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 87 Td
+(2026-09-02 abda199 Delete game-integration.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+54 36 Td
+(Elephant Track Defense update tracker) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+500 36 Td
+(Page 1 of 3) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 4164 >>
+stream
+q
+0.93 0.95 0.93 rg
+0 760 612 32 re f
+0.29 0.44 0.36 rg
+0 756 612 4 re f
+Q
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 720 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 705 Td
+(2026-09-02 17c7b28 Delete game.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 693 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 678 Td
+(2026-09-02 f5ac3a9 Delete heater.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 666 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 651 Td
+(2026-09-02 310f0af Delete ice-opening-cutscene.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 639 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 624 Td
+(2026-09-02 0dc3082 Delete ice-opening-cutscene.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 612 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 597 Td
+(2026-09-02 ced2914 Delete index.html) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 585 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 570 Td
+(2026-09-02 5b818a5 Delete map-system.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 558 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 543 Td
+(2026-09-02 eeff17b Delete normal-player-simulation.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 531 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 516 Td
+(2026-09-02 781ff21 Delete orb-progression.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 504 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 489 Td
+(2026-09-02 4056e6e Delete orb-progression.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 477 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 462 Td
+(2026-09-02 1a5dba5 Delete recovery.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 450 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 435 Td
+(2026-09-02 9e5cfaf Delete robot-specialization.css) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 423 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 408 Td
+(2026-09-02 3da5211 Delete snow-mutation.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 396 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 381 Td
+(2026-09-02 c59ed3f Delete styles.css) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 369 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 354 Td
+(2026-09-02 20cd648 Delete test-content.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 342 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 327 Td
+(2026-09-02 4c46773 Delete currency.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 315 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 300 Td
+(2026-09-02 33e5a62 Delete content-schema.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 288 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 273 Td
+(2026-09-02 26dffef Delete content-runtime.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 261 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 246 Td
+(2026-09-02 8fb2ae1 Delete content-local.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 234 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 219 Td
+(2026-09-02 6ab5219 Delete content-data.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 207 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 192 Td
+(2026-09-01 bc647bd Delete build-local-content.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 180 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 165 Td
+(2026-09-01 b9e55e4 Delete balance-simulation.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 153 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 138 Td
+(2026-09-01 80ce0dc Delete data directory) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 126 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 111 Td
+(2026-09-01 e972699 Add files via upload) Tj
+ET
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 99 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+68 84 Td
+(2026-09-01 245cd62 Delete ice-opening-cutscene.test.js) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+54 36 Td
+(Elephant Track Defense update tracker) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+500 36 Td
+(Page 2 of 3) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 573 >>
+stream
+q
+0.93 0.95 0.93 rg
+0 760 612 32 re f
+0.29 0.44 0.36 rg
+0 756 612 4 re f
+Q
+BT
+/F1 8 Tf
+0.14 0.19 0.23 rg
+82 720 Td
+(Author: LemonTheAxolotl) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+54 705 Td
+() Tj
+ET
+BT
+/F2 9 Tf
+0.14 0.19 0.23 rg
+54 685 Td
+(Refresh this PDF after meaningful updates with: node scripts/update-tracker.mjs) Tj
+ET
+BT
+/F1 9 Tf
+0.14 0.19 0.23 rg
+54 673 Td
+(Optional automation: git config core.hooksPath .githooks) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+54 36 Td
+(Elephant Track Defense update tracker) Tj
+ET
+BT
+/F1 8 Tf
+0.36 0.42 0.45 rg
+500 36 Td
+(Page 3 of 3) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R] /Count 3 >>
+endobj
+10 0 obj
+<< /Type /Catalog /Pages 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000003846 00000 n 
+0000003982 00000 n 
+0000008198 00000 n 
+0000008334 00000 n 
+0000008958 00000 n 
+0000009094 00000 n 
+0000009163 00000 n 
+trailer
+<< /Size 11 /Root 10 0 R >>
+startxref
+9213
+%%EOF
