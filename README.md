@@ -13,7 +13,7 @@ Game maps, waves, towers, orbs, achievements, tutorials, and difficulties are ed
 ## Maps
 
 - **Foundry Sector 07** is the original 50-wave map and includes the final boss encounter.
-- **Frozen Expanse** is a separate, snowy 50-wave map. It unlocks permanently after defeating the Foundry finale (or with the owner debug command `/unlock frozen`) and has its own run progress and difficulty-scoped save state.
+- **Frozen Expanse** is a separate, snowy 50-wave map. It unlocks permanently after defeating the Foundry finale.
 
 Map definitions and their track waypoints live in [`data/maps.json`](data/maps.json); wave sets live in [`data/waves.json`](data/waves.json).
 
