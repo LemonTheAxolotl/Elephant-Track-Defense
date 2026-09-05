@@ -1,3 +1,0 @@
-*.pdf binary
-*.mjs text eol=lf
-.githooks/* text eol=lf
