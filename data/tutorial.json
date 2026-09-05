@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "steps": [
+    {"id":"tutorial_track","title":"THE TRACK","text":"Metal orbs roll along this track toward the endpoint.","highlight":"track"},
+    {"id":"tutorial_health","title":"YOUR HEALTH","text":"Health starts at 100 / 100 and remains fixed in the HUD.","highlight":"#healthStat"},
+    {"id":"tutorial_escaped","title":"ESCAPED ORBS","text":"Every orb that escapes removes Health Points based on its tier.","highlight":"#healthStat"},
+    {"id":"tutorial_currency","title":"METAL CURRENCY","text":"Destroy orbs to earn metal currency for towers and upgrades.","highlight":"#currency"},
+    {"id":"tutorial_water","title":"WATER ELEPHANT","text":"The Water Elephant is the recommended first purchase because it can defend the track. A Papaya Plant also costs 100, but buying one first is a risky economy strategy because it cannot attack.","highlight":"#buyElephant"},
+    {"id":"tutorial_buy","title":"BUY WATER ELEPHANT","text":"Buy a Water Elephant for 100 currency.","highlight":"#buyElephant","requiredAction":"bought"},
+    {"id":"tutorial_valid_ground","title":"CHOOSE VALID GROUND","text":"Select a Shop item, then click or tap valid ground outside the track and away from occupied ground. Click or tap that same selected Shop item again to cancel; select a different Shop item to switch previews.","highlight":"placement"},
+    {"id":"tutorial_radius","title":"ATTACK RADIUS","text":"The circle previews attack range. Green is valid and red is blocked.","highlight":"placement"},
+    {"id":"tutorial_place","title":"PLACE THE ELEPHANT","text":"Place your Water Elephant here so it can reach the track.","highlight":"placement","requiredAction":"placed"},
+    {"id":"tutorial_gift","title":"STARTER GIFT","text":"You received a free starter Water Elephant. The highlighted ground inside the large U bend covers three nearby track sections. It is recommended, but you may place the gift on any valid ground.","highlight":"placement","requiredAction":"starterGiftPlaced"},
+    {"id":"tutorial_wave","title":"START WAVE 1","text":"Launch Wave 1 when both elephants are placed and your defense is ready.","highlight":"#startWave","requiredAction":"wave"},
+    {"id":"tutorial_targeting","title":"AUTOMATIC TARGETING","text":"Elephants automatically face and spray valid orbs inside their range.","highlight":"track"},
+    {"id":"tutorial_speedup","title":"DAMAGED ORBS SPEED UP","text":"As normal orbs lose HP, they gain up to 20% movement speed.","highlight":"track"},
+    {"id":"tutorial_rewards","title":"DESTRUCTION REWARDS","text":"Defeated orbs crack apart, then send a gold reward light to your currency.","highlight":"#currency"},
+    {"id":"tutorial_dictionary","title":"ENCYCLOPEDIA LIGHT","text":"A first defeat also sends a magical knowledge light to the encyclopedia.","highlight":"#openEncyclopedia"},
+    {"id":"tutorial_select","title":"SELECT YOUR ELEPHANT","text":"Select the elephant you placed to inspect its statistics.","highlight":"placement","requiredAction":"selected"},
+    {"id":"tutorial_upgrades","title":"UPGRADES","text":"Every elephant has five total levels. Each upgrade improves damage, speed, and range.","highlight":"#upgradeTower"},
+    {"id":"tutorial_costs","title":"SCALING COSTS","text":"Successive upgrades cost more, so plan each investment.","highlight":"#upgradeTower"},
+    {"id":"tutorial_selling","title":"SELLING","text":"Selling refunds only 50% of the original purchase price. Upgrades never increase it.","highlight":"#sellTower"},
+    {"id":"tutorial_game_speed","title":"GAME SPEED","text":"Cycle between 1×, 1.5×, and 2× without multiplying any timer twice.","highlight":"#gameSpeed"},
+    {"id":"tutorial_wave_control","title":"WAVE CONTROL","text":"Start waves manually or enable Auto for a three-second warning before the next launch.","highlight":"#autoWaves"},
+    {"id":"tutorial_scroll","title":"MORE TRACK BELOW","text":"The track continues below. Scroll down to see the rest of the map.","highlight":"#scrollDiscoveryHint","requiredAction":"scroll"},
+    {"id":"tutorial_ready","title":"YOU'RE READY!","text":"Build carefully, scroll into the lower foundry, and defend through Wave 50.","highlight":"track"}
+  ],
+  "config":{"TUTORIAL_SECOND_PLACEMENT_SEPARATION":210,"TUTORIAL_EARLY_TRACK_FRACTION":0.55,"TUTORIAL_MINIMUM_TRACK_COVERAGE":48,"TUTORIAL_RECOMMENDATION_SAMPLE_STEP":24,"TUTORIAL_RECOMMENDATION_CLEARANCE":8,"TUTORIAL_STORAGE_KEY":"iron-trunk-tutorial","TUTORIAL_STEP_COUNT":23}
+}
