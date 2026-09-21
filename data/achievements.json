@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "difficultyRewards": {"Easy":{"health":1,"currency":10},"Medium":{"health":2,"currency":20},"Hard":{"health":3,"currency":30},"Very Hard":{"health":4,"currency":40},"Legendary":{"health":5,"currency":50}},
+  "achievements": [
+    {"id":"first-water","name":"Make a Splash","description":"Place your first Water Elephant.","difficulty":"Easy","unlockCondition":{"event":"tower_placed","towerId":"water_elephant"}},
+    {"id":"perfect-wave","name":"Untouched Convoy","description":"Finish a wave without losing Health Points.","difficulty":"Medium","unlockCondition":{"event":"wave_completed","healthLost":0}},
+    {"id":"ghost-orb","name":"Ghostbuster","description":"Defeat your first Ghost Orb.","difficulty":"Medium","unlockCondition":{"event":"orb_defeated","variant":"ghost"}},
+    {"id":"food-orb","name":"No Free Lunch","description":"Defeat a Food Orb.","difficulty":"Hard","unlockCondition":{"event":"orb_defeated","orbId":"food_orb"}},
+    {"id":"fume-orb","name":"Hold Your Breath","description":"Survive a Fume Orb until its fumes expire.","difficulty":"Hard","unlockCondition":{"event":"orb_expired","orbId":"fume_orb"}},
+    {"id":"engineer-orb","name":"Demolition Denied","description":"Destroy an Engineer Orb.","difficulty":"Very Hard","unlockCondition":{"event":"orb_defeated","orbId":"engineer_orb"}},
+    {"id":"repair-hole","name":"Patch Job","description":"Repair your first Engineer hole.","difficulty":"Hard","unlockCondition":{"event":"engineer_hole_repaired"}},
+    {"id":"engineer-mine","name":"Reverse Engineering","description":"Trigger a landmine against an Engineer Orb.","difficulty":"Very Hard","unlockCondition":{"event":"landmine_triggered","orbId":"engineer_orb"}},
+    {"id":"watch-your-step","name":"Watch Your Step","description":"Have a fleeing elephant injured by a Level 2 Landmine.","difficulty":"Legendary","unlockCondition":{"event":"tower_injured","mineLevel":2}},
+    {"id":"wave-25","name":"Halfway Hero","description":"Reach Wave 25.","difficulty":"Very Hard","unlockCondition":{"event":"wave_started","waveId":"wave_25"}},
+    {"id":"wave-50","name":"Foundry Legend","description":"Reach Wave 50.","difficulty":"Legendary","unlockCondition":{"event":"wave_started","waveId":"wave_50"}}
+  ]
+}
