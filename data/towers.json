@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "towers": [
+    {
+      "id": "water_elephant",
+      "runtimeType": "base",
+      "name": "WATER ELEPHANT",
+      "cost": 100,
+      "placementLimitGroup": "standard_elephants",
+      "baseStats": {
+        "damage": 27,
+        "attackCooldown": 0.75,
+        "range": 155
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 50,
+        "costMultiplier": 1.5,
+        "damagePerLevel": 0.05,
+        "attackSpeedPerLevel": 0.02,
+        "rangePerLevel": 0.015
+      },
+      "targetingRules": {
+        "normal": true,
+        "ghost": false
+      },
+      "shopDescription": "Water spray • Attacks normal orbs"
+    },
+    {
+      "id": "ghost_scout_elephant",
+      "runtimeType": "eyewear",
+      "name": "GHOST SCOUT ELEPHANT",
+      "cost": 125,
+      "placementLimitGroup": "ghost_scout_elephants",
+      "baseStats": {
+        "damage": 29,
+        "attackCooldown": 0.72,
+        "range": 165
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 100,
+        "costMultiplier": 1.5
+      },
+      "targetingRules": {
+        "normal": true,
+        "ghost": true
+      },
+      "shopDescription": "Only elephant that can see ghosts"
+    },
+    {
+      "id": "foodie_elephant",
+      "runtimeType": "foodie",
+      "name": "FOODIE ELEPHANT",
+      "cost": 150,
+      "placementLimitGroup": "foodie_elephants",
+      "baseStats": {
+        "damage": 30,
+        "attackCooldown": 0.75,
+        "range": 160
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 125,
+        "costMultiplier": 1.5
+      },
+      "targetingRules": {
+        "normal": true,
+        "food": true,
+        "foodPriority": true
+      },
+      "shopDescription": "Food-lure immune • Strong against food orbs"
+    },
+    {
+      "id": "gas_mask_elephant",
+      "runtimeType": "gas",
+      "name": "GAS MASK ELEPHANT",
+      "cost": 175,
+      "placementLimitGroup": "gas_mask_elephants",
+      "baseStats": {
+        "damage": 27,
+        "attackCooldown": 0.75,
+        "range": 155
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 175,
+        "costMultiplier": 1.5
+      },
+      "targetingRules": {
+        "normal": true,
+        "fumeImmune": true
+      },
+      "shopDescription": "Fume immune • Attacks normal orbs"
+    },
+    {
+      "id": "frost_elephant",
+      "runtimeType": "frost",
+      "name": "FROST ELEPHANT",
+      "cost": 175,
+      "placementLimitGroup": "standard_elephants",
+      "baseStats": {
+        "damage": 0,
+        "attackCooldown": 1.15,
+        "range": 150
+      },
+      "upgrades": {
+        "maxLevel": 3
+      },
+      "targetingRules": {
+        "normal": true,
+        "slows": true
+      },
+      "shopDescription": "Icy spray • Slows orbs • No damage"
+    },
+    {
+      "id": "flame_elephant",
+      "runtimeType": "flame",
+      "name": "FLAME ELEPHANT",
+      "cost": 225,
+      "placementLimitGroup": "standard_elephants",
+      "baseStats": {
+        "directImpactDamage": 0,
+        "attackCooldown": 1,
+        "range": 155,
+        "burnDuration": 5,
+        "burnTickInterval": 1,
+        "burnDamagePerTick": 5.67
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 225,
+        "costMultiplier": 1.5,
+        "attackSpeedPerLevel": 0.02,
+        "rangePerLevel": 0.015
+      },
+      "targetingRules": {
+        "normal": true,
+        "ghost": false,
+        "burns": true,
+        "meltsIceShield": true,
+        "freezeImmune": true
+      },
+      "shopDescription": "Burns orbs • Melts Ice Shields • Freeze immune"
+    },
+    {
+      "id": "heater",
+      "runtimeType": "heater",
+      "name": "HEATER",
+      "cost": 50,
+      "placementLimitGroup": "standard_elephants",
+      "baseStats": {
+        "radius": 115
+      },
+      "upgrades": {
+        "maxLevel": 3,
+        "baseCost": 50,
+        "costMultiplier": 1.5,
+        "radii": [
+          115,
+          150,
+          190
+        ]
+      },
+      "targetingRules": {
+        "attacks": false,
+        "support": "snow_freeze_protection"
+      },
+      "shopDescription": "Warmth field • L1–2 faster freeze recovery • L3 reflects freezes"
+    },
+    {
+      "id": "splash_elephant",
+      "runtimeType": "splash",
+      "name": "SPLASH ELEPHANT",
+      "cost": 200,
+      "placementLimitGroup": "standard_elephants",
+      "baseStats": {
+        "damageMultiplier": 0.5,
+        "rangeMultiplier": 1.1,
+        "pulseCooldown": 5
+      },
+      "upgrades": {
+        "maxLevel": 5,
+        "baseCost": 200,
+        "costMultiplier": 1.5,
+        "damagePerLevel": 0.03,
+        "rangePerLevel": 0.05
+      },
+      "specializations": [
+        {
+          "id": "standard",
+          "name": "STANDARD SPLASH ELEPHANT"
+        },
+        {
+          "id": "gas",
+          "name": "GAS MASK SPLASH ELEPHANT",
+          "damageMultiplier": 0.95
+        },
+        {
+          "id": "foodie",
+          "name": "FOODIE SPLASH ELEPHANT",
+          "damageMultiplier": 0.95
+        },
+        {
+          "id": "ghost",
+          "name": "GHOST SCOUT SPLASH ELEPHANT",
+          "damageMultiplier": 0.95
+        }
+      ],
+      "targetingRules": {
+        "areaWide": true
+      },
+      "shopDescription": "Full-range splash • Low damage per orb"
+    },
+    {
+      "id": "robot_elephant",
+      "runtimeType": "robot",
+      "name": "ROBOT FACTORY",
+      "cost": 150,
+      "placementLimitGroup": "robot_factories",
+      "baseStats": {
+        "miniSpeed": 32,
+        "miniRange": 125
+      },
+      "upgrades": {
+        "maxLevel": 5
+      },
+      "specializations": [
+        {
+          "id": "standard",
+          "name": "STANDARD ROBOT FACTORY"
+        },
+        {
+          "id": "ghost",
+          "name": "GHOST-SEEKING ROBOT FACTORY"
+        },
+        {
+          "id": "food",
+          "name": "FOOD-IMMUNE ROBOT FACTORY"
+        },
+        {
+          "id": "fume",
+          "name": "FUME-IMMUNE ROBOT FACTORY"
+        }
+      ],
+      "targetingRules": {
+        "factory": true
+      },
+      "shopDescription": "Deploys Mini Robot Elephants at the track exit"
+    },
+    {
+      "id": "papaya_plant",
+      "runtimeType": "papaya",
+      "name": "PAPAYA PLANT",
+      "cost": 100,
+      "placementLimitGroup": "papaya_plants",
+      "baseStats": {
+        "incomeMultiplier": 1.2
+      },
+      "upgrades": {
+        "maxLevel": 3,
+        "baseCost": 120,
+        "costMultiplier": 1.5,
+        "incomeMultipliers": [
+          1.2,
+          1.5,
+          1.8
+        ]
+      },
+      "targetingRules": {
+        "attacks": false
+      },
+      "shopDescription": "Economy • Increases orb income"
+    },
+    {
+      "id": "watermelon_farm",
+      "runtimeType": "goldenPapaya",
+      "name": "WATERMELON FARM",
+      "cost": 125,
+      "placementLimitGroup": "watermelon_farms",
+      "baseStats": {
+        "waveRewardMultiplier": 1.5,
+        "damage": 0
+      },
+      "upgrades": {
+        "maxLevel": 1
+      },
+      "targetingRules": {
+        "attacks": false
+      },
+      "shopDescription": "Wave income • Increases wave bonuses"
+    }
+  ],
+  "placementLimits": {
+    "standard_elephants": 15,
+    "foodie_elephants": 5,
+    "ghost_scout_elephants": 7,
+    "gas_mask_elephants": 5,
+    "robot_factories": 5,
+    "papaya_plants": 5,
+    "watermelon_farms": 1,
+    "all_units": 26,
+    "active_mini_robots": 50
+  },
+  "config": {
+    "startingCurrency": 100,
+    "waterElephantCost": 100,
+    "papayaPlantCost": 100,
+    "eyewearElephantCost": 125,
+    "foodieElephantCost": 150,
+    "frostElephantCost": 175,
+    "FROST_ELEPHANT_RADIUS": 150,
+    "FROST_ELEPHANT_ATTACK_SPEED": 1.15,
+    "FROST_SLOW_DURATION": 1.35,
+    "FROST_MAX_LEVEL": 3,
+    "gasMaskElephantCost": 175,
+    "splashElephantCost": 200,
+    "towerSellRate": 0.5,
+    "goldenPapayaPlantCost": 125,
+    "maximumGoldenPapayaPlants": 1,
+    "goldenPapayaWaveRewardMultiplier": 1.5,
+    "goldenPapayaPlantDamage": 0,
+    "ELEPHANT_LIMIT": 15,
+    "FOODIE_ELEPHANT_LIMIT": 5,
+    "TOTAL_UNIT_LIMIT": 26,
+    "PAPAYA_LIMIT": 5,
+    "PAPAYA_MAX_LEVEL": 3,
+    "PAPAYA_BASE_UPGRADE_COST": 120,
+    "PAPAYA_UPGRADE_COST_MULTIPLIER": 1.5,
+    "PAPAYA_INCOME_MULTIPLIERS": [
+      1.2,
+      1.5,
+      1.8
+    ],
+    "ELEPHANT_RADIUS": 155,
+    "ELEPHANT_DAMAGE": 27,
+    "ELEPHANT_ATTACK_SPEED": 0.75,
+    "EYEWEAR_ELEPHANT_RADIUS": 165,
+    "EYEWEAR_ELEPHANT_DAMAGE": 29,
+    "EYEWEAR_ELEPHANT_ATTACK_SPEED": 0.72,
+    "EYEWEAR_NORMAL_ORB_DAMAGE_MULTIPLIER": 0.95,
+    "EYEWEAR_BASE_UPGRADE_COST": 100,
+    "EYEWEAR_UPGRADE_COST_MULTIPLIER": 1.5,
+    "FOODIE_ELEPHANT_RADIUS": 160,
+    "FOODIE_ELEPHANT_DAMAGE": 30,
+    "FOODIE_ATTACK_RATE_MULTIPLIER": 0.8,
+    "FOODIE_NORMAL_ORB_DAMAGE_MULTIPLIER": 0.98,
+    "FOODIE_FOOD_ORB_DAMAGE_MULTIPLIER": 1.05,
+    "FOODIE_FOOD_ORB_ATTACK_RATE_MULTIPLIER": 1.03,
+    "FOODIE_BASE_UPGRADE_COST": 125,
+    "FOODIE_UPGRADE_COST_MULTIPLIER": 1.5,
+    "GAS_MASK_BASE_UPGRADE_COST": 175,
+    "GAS_MASK_UPGRADE_COST_MULTIPLIER": 1.5,
+    "SPLASH_BASE_UPGRADE_COST": 200,
+    "SPLASH_UPGRADE_COST_MULTIPLIER": 1.5,
+    "SPLASH_DAMAGE_PER_LEVEL": 0.03,
+    "SPLASH_RANGE_PER_LEVEL": 0.05,
+    "SPLASH_ELEPHANT_BASE_DAMAGE_MULTIPLIER": 0.5,
+    "SPLASH_ELEPHANT_RANGE_MULTIPLIER": 1.1,
+    "SPLASH_RADIUS": 76,
+    "SPLASH_PULSE_COOLDOWN": 5,
+    "SPLASH_PREP_DURATION": 0.32,
+    "SPLASH_SPRAY_DURATION": 0.2,
+    "SPLASH_EXPANSION_DURATION": 0.42,
+    "SPLASH_PUDDLE_DURATION": 0.72,
+    "SAME_TYPE_GROUP_PENALTY_START": 2,
+    "SAME_TYPE_GROUP_DAMAGE_LOSS": 0.02,
+    "MINIMUM_GROUP_DAMAGE_MULTIPLIER": 0.75,
+    "ELEPHANT_MAX_LEVEL": 5,
+    "ELEPHANT_BASE_UPGRADE_COST": 50,
+    "ELEPHANT_UPGRADE_COST_MULTIPLIER": 1.5,
+    "DAMAGE_PER_LEVEL": 0.05,
+    "ATTACK_SPEED_PER_LEVEL": 0.02,
+    "RANGE_PER_LEVEL": 0.015,
+    "waterElephantTier0DamageMultiplier": 1.1,
+    "STARTER_GIFT_WAVE": 1,
+    "STARTER_GIFT_NON_SELLABLE": false,
+    "engineerTowerRefundRate": 0.25,
+    "floorRepairCost": 100,
+    "floorLevelOneCost": 100,
+    "floorLevelTwoCost": 250,
+    "landmineLevelTwoUpgradeCost": 250,
+    "landmineBlastRadius": 150,
+    "landmineOrbDamage": 50,
+    "ELEPHANT_WALK_SPEED": 95,
+    "FROST_SLOW_PER_STACK": 0.05,
+    "FROST_SLOW_MAX_STACKS": 5,
+    "FROST_SNOW_CAP_HEAL_PERCENT": 0.05,
+    "FROST_SNOW_WEIGHT_SLOW_PER_HEAL": 0.02,
+    "FROST_SNOW_WEIGHT_SPEED_FLOOR": 0.25,
+    "heaterCost": 50,
+    "HEATER_RADII": [
+      115,
+      150,
+      190
+    ],
+    "HEATER_BASE_UPGRADE_COST": 50,
+    "HEATER_UPGRADE_COST_MULTIPLIER": 1.5,
+    "HEATER_BACKLASH_MAX_HP_PERCENT": 0.25
+  }
+}
