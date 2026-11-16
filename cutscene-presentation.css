@@ -1,0 +1,32 @@
+/* Dialogue lives in viewport coordinates; story artwork has its own camera. */
+.cutscene-camera{position:absolute;z-index:10;inset:0;width:100%;height:100%;transform-origin:0 0}
+.ice-opening-background{position:absolute;z-index:0;inset:0;width:100%;height:100%;pointer-events:none}
+.ice-opening-scene>.ice-outdoor-test{z-index:0;transition:none}
+/* Use the existing fade only while the incoming frame is being prepared. */
+.ice-opening-scene[data-render-pending=true]:after{opacity:1;transition:none}
+.ice-opening-scene .ice-scientist-speech,.finale-scene .finale-speech{
+  position:absolute;box-sizing:border-box;min-width:0;max-width:calc(100% - 28px);
+  margin:0;right:auto;bottom:auto;transform:none;animation:none;
+  border-radius:15px;text-align:left;overflow-wrap:break-word;
+  transition:opacity .2s ease;z-index:95;
+}
+.ice-opening-scene .ice-scientist-speech:before,.finale-scene .finale-speech:after{
+  content:'';display:block;position:absolute;left:var(--speech-tail-x);right:auto;
+  top:100%;bottom:auto;width:0;height:0;transform:translateX(-50%);
+  border:12px solid transparent;border-bottom:0;border-top-color:#d9f6fb;
+}
+.ice-opening-scene .ice-scientist-speech[data-speech-placement=below]:before,
+.finale-scene .finale-speech[data-speech-placement=below]:after{
+  top:auto;bottom:100%;left:var(--speech-tail-x);right:auto;
+  border:12px solid transparent;border-top:0;border-bottom-color:#d9f6fb;
+}
+.ice-opening-scene .chamber-orb.gameplay-orb-art{background:none!important;border:0!important;box-shadow:none!important}
+.gameplay-orb-art>canvas{display:block;width:100%;height:100%}
+.cutscene-tier-orb.gameplay-orb-art{background:none;border:0;box-shadow:none;border-radius:0}
+.cutscene-tier-orb.gameplay-orb-art:before{display:none}
+/* The menu contains only its label, with symmetric padding at every width. */
+.header-menu-toggle{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:0}
+.header-menu-toggle::before,.header-menu-toggle::after{content:none!important;display:none!important}
+@media(max-width:600px){
+  .ice-opening-scene .ice-scientist-speech,.finale-scene .finale-speech{font-size:12px;line-height:1.35;padding:10px 12px}
+}
