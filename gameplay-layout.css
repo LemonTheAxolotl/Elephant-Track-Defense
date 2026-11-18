@@ -1,0 +1,67 @@
+/* No overrides means the original responsive layout, including the mobile drawer. */
+.reset-layout{flex:none;min-height:32px;padding:0 8px;border:1px solid #4d7580;border-radius:4px;background:#10262e;color:#cce8ed;font:700 9px Inter;cursor:pointer;white-space:nowrap}
+.layout-resize-handle{display:none;touch-action:none;user-select:none;-webkit-user-select:none}
+.reset-layout:focus-visible,.layout-resize-handle:focus-visible{outline:2px solid #8eefff;outline-offset:-2px}
+@media(min-width:1181px){
+  .game-shell>.top-hud{height:var(--gameplay-hud-height,auto)!important;flex:0 0 var(--gameplay-hud-height,auto)!important;min-height:54px;align-content:center}
+  .game-shell>.play-area{position:relative;grid-template-columns:minmax(0,1fr) var(--gameplay-sidebar-width,310px)}
+  .layout-resize-handle{display:block;position:absolute;z-index:40;background:transparent}
+  .layout-resize-handle:after{content:'';position:absolute;border-radius:4px;background:#74939b88;transition:background .12s}
+  .layout-resize-handle:hover:after,.layout-resize-handle:focus-visible:after{background:#8eefff}
+  .hud-height-handle{left:0;right:0;bottom:0;height:8px;cursor:ns-resize}
+  .hud-height-handle:after{width:44px;height:3px;left:calc(50% - 22px);bottom:1px}
+  .sidebar-width-handle{top:0;bottom:0;right:calc(var(--gameplay-sidebar-width,310px) - 5px);width:10px;cursor:ew-resize}
+  .sidebar-width-handle:after{width:3px;height:44px;left:4px;top:calc(50% - 22px)}
+  .game-shell>.play-area>aside{min-width:0;overflow-x:hidden;container-type:inline-size}
+  .game-shell>.play-area .tower-card{grid-template-columns:92px minmax(0,1fr)}
+  .game-shell>.play-area .tower-copy{min-width:0;overflow-wrap:anywhere}
+  .game-shell>.play-area .tower-preview{min-width:0}
+  .game-shell>.play-area .wave-start-group{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+  .game-shell>.play-area #selectedStats{min-width:0;overflow-wrap:anywhere}
+}
+/* Tablets keep a real sidebar; phones retain the existing bottom drawer. */
+@media(min-width:761px){
+  .game-shell>.play-area{position:relative;display:grid!important;grid-template-columns:minmax(0,1fr) var(--gameplay-sidebar-width,310px)!important;grid-template-rows:auto minmax(0,1fr)!important}
+  .game-shell>.play-area>.canvas-wrap{grid-column:1;grid-row:1 / span 2}
+  .game-shell>.play-area>.wave-controls{grid-column:2;grid-row:1;margin:0;padding:8px 12px;border:0;border-bottom:1px solid #33484f}
+  .game-shell>.play-area>aside{position:static!important;grid-column:2;grid-row:2;width:auto!important;height:auto!important;min-width:0;min-height:0;max-height:none;transform:none!important;border-radius:0;border-top:0!important;border-left:1px solid #40555b;overflow:auto;container-type:inline-size}
+  .game-shell>.play-area .tower-card{grid-template-columns:92px minmax(0,1fr)}
+  .game-shell>.play-area .tower-copy{min-width:0;overflow-wrap:anywhere}
+  .game-shell>.play-area .wave-start-group{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+  .sidebar-width-handle{display:block;position:absolute;z-index:60;top:0;bottom:0;right:calc(var(--gameplay-sidebar-width,310px) - 5px);width:10px;cursor:ew-resize;background:transparent;touch-action:none}
+  .sidebar-width-handle:after{content:'';position:absolute;width:3px;height:44px;left:calc(50% - 1.5px);top:calc(50% - 22px);border-radius:4px;background:#74939b88;pointer-events:none}
+  .sidebar-width-handle[data-active]:after{background:#8eefff;box-shadow:0 0 8px #8eefff88}
+  .play-area>aside .mobile-drawer-close,.mobile-map-controls #mobileShopToggle,.mobile-map-controls #mobileStatsToggle{display:none!important}
+}
+/* Enlarge only the boundary hit strip on touch-capable systems. Mouse motion
+   still uses the same one-to-one distance, including on hybrid computers. */
+@media(min-width:761px) and (any-pointer:coarse){
+  .sidebar-width-handle{width:28px;right:calc(var(--gameplay-sidebar-width,310px) - 14px)}
+}
+html[data-layout-resizing=height],html[data-layout-resizing=height] *{cursor:ns-resize!important;user-select:none!important}
+/* The default stylesheet remains the reference. These real lengths apply
+   only to a manually resized desktop header, never the sidebar or drawer. */
+@media(min-width:1181px){
+  .game-shell>.top-hud[data-content-sized]{min-height:48px;grid-template-columns:max-content max-content max-content;grid-template-areas:'left center right';justify-content:space-between;gap:calc(8 * var(--hud-unit)) calc(12 * var(--hud-unit));padding:calc(5 * var(--hud-unit)) calc(14 * var(--hud-unit)) calc(7 * var(--hud-unit))!important;box-sizing:border-box}
+  .game-shell>.top-hud[data-hud-rows=two]{grid-template-columns:max-content max-content;grid-template-areas:'left left' 'center right';justify-content:space-between}
+  .top-hud[data-content-sized] .hud-left,.top-hud[data-content-sized] .hud-right{gap:calc(10 * var(--hud-unit));flex-wrap:nowrap;width:max-content}
+  .top-hud[data-content-sized] .hud-title{flex:none}
+  .top-hud[data-content-sized] h1{font-size:calc(20 * var(--hud-unit));overflow:visible;text-overflow:clip;letter-spacing:calc(1.2 * var(--hud-unit))}
+  .top-hud[data-content-sized] .hud-left .eyebrow{font-size:calc(7 * var(--hud-unit));letter-spacing:calc(2 * var(--hud-unit));margin-bottom:calc(2 * var(--hud-unit))}
+  .top-hud[data-content-sized] .pause-button,.top-hud[data-content-sized] .reset-layout,.top-hud[data-content-sized] .header-menu-toggle{height:calc(32 * var(--hud-unit));min-height:0;min-width:0;padding:0 calc(9 * var(--hud-unit));font-size:calc(9 * var(--hud-unit));letter-spacing:calc(.8 * var(--hud-unit))}
+  .top-hud[data-content-sized] .header-wave-controls{min-height:0;padding:calc(3 * var(--hud-unit)) calc(5 * var(--hud-unit));gap:calc(5 * var(--hud-unit));border-radius:calc(6 * var(--hud-unit))}
+  .top-hud[data-content-sized] .game-speed-options{gap:calc(3 * var(--hud-unit))}
+  .top-hud[data-content-sized] .game-speed{height:calc(28 * var(--hud-unit));min-height:0;min-width:calc(31 * var(--hud-unit));padding:0 calc(5 * var(--hud-unit));font-size:calc(10 * var(--hud-unit))}
+  .top-hud[data-content-sized] .auto-toggle{width:calc(38 * var(--hud-unit));height:calc(21 * var(--hud-unit));transform:none}
+  .top-hud[data-content-sized] .auto-toggle span:before{width:calc(15 * var(--hud-unit));height:calc(15 * var(--hud-unit));left:calc(3 * var(--hud-unit));top:calc(3 * var(--hud-unit))}
+  .top-hud[data-content-sized] .auto-toggle input:checked+span:before{transform:translateX(calc(17 * var(--hud-unit)))}
+  .top-hud[data-content-sized] .stats{gap:calc(5 * var(--hud-unit));flex:none;flex-wrap:nowrap}
+  .top-hud[data-content-sized] .stats .stat{min-height:calc(31 * var(--hud-unit));padding:calc(2 * var(--hud-unit)) calc(6 * var(--hud-unit));gap:calc(11 * var(--hud-unit));border-radius:calc(4 * var(--hud-unit))}
+  .top-hud[data-content-sized] .stats .stat>span{font-size:calc(25 * var(--hud-unit))}
+  .top-hud[data-content-sized] .stats .stat strong{font-size:calc(13 * var(--hud-unit));margin-top:calc(2 * var(--hud-unit));letter-spacing:calc(1 * var(--hud-unit))}
+  .top-hud[data-content-sized] .stats .stat small{font-size:calc(6 * var(--hud-unit));letter-spacing:calc(2 * var(--hud-unit))}
+  .top-hud[data-content-sized] .stats .health-stat{min-width:calc(138 * var(--hud-unit))}
+  .top-hud[data-content-sized] .health-track{width:calc(130 * var(--hud-unit));height:calc(5 * var(--hud-unit));margin-top:calc(5 * var(--hud-unit))}
+}
+html[data-layout-resizing=width],html[data-layout-resizing=width] *{cursor:ew-resize!important;user-select:none!important}
+@media(max-width:760px){.top-hud .hud-left{flex-wrap:wrap}.reset-layout{min-height:30px;font-size:8px;padding-inline:6px}}
