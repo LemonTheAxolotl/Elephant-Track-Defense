@@ -1,4 +1,3 @@
-/* Beta difficulty rules.  Loaded after game.js so this wraps the final active gameplay functions. */
 const DIFFICULTY_RULES=Object.fromEntries(globalThis.GameContent.difficulties.difficulties.map(item=>[item.id,{name:item.name,hpMultiplier:item.nonBossHpMultiplier,speedMultiplier:item.nonBossSpeedMultiplier??1,damageMultiplier:item.elephantFinalDamageMultiplier,description:item.displayText}]));
 const DIFFICULTY_RUN_STORAGE_KEY=`elephant-track-defense-difficulty-run:${globalThis.GameContent.activeMap.id}`,DIFFICULTY_RUN_VERSION=2;
 const difficultyModal=document.querySelector('#difficultyModal');
