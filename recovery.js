@@ -1,4 +1,3 @@
-/* Three-wave recovery after a Level 2 landmine injury. */
 const RECOVERY_WAVES=3;
 const recoveryMineInjuryBase=injureElephantWithMine;
 injureElephantWithMine=function(tower,tile){const wasRecovering=!!tower.recoveringWaves;const injured=recoveryMineInjuryBase(tower,tile);if(!injured&&!wasRecovering)return false;tower.injured=false;tower.injuryVisual=true;tower.recoveringWaves=RECOVERY_WAVES;tower.recoveryHealLife=0;showEncyclopediaNotice(`${tower.name||'Elephant'} recovering — 3 waves left.`);updateStats();return true};
