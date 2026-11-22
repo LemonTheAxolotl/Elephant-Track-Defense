@@ -1,4 +1,3 @@
-// Presentation-only adapters. Gameplay entities and render functions stay untouched.
 (function(root){
   'use strict';
   const rect=(left,top,width,height)=>({left,top,width,height,right:left+width,bottom:top+height});
