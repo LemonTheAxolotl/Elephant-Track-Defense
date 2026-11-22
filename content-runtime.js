@@ -1,4 +1,3 @@
-// Stable-ID bindings and presentation text shared by all gameplay modules.
 (function(root){
   'use strict';
   const content=root.GameContent;
