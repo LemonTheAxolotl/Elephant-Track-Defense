@@ -1,4 +1,3 @@
-// Multi-map profile, selection, map-scoped waves, and resumable per-map runs.
 (function(root){
   'use strict';
   const content=root.GameContent,map=content.activeMap,PROFILE_KEY='elephant-track-profile-v1',RUN_PREFIX='elephant-track-run-v1',OWNER_MAP_LAUNCH_KEY='elephant-track-owner-map-launch-v1',MAP_SPEED_LAUNCH_KEY='elephant-track-map-speed-launch-v1';
