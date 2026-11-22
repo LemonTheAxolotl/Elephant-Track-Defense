@@ -1,4 +1,3 @@
-// Data-driven first section of the Frozen Expanse opening cinematic.
 (function(root){
   'use strict';
   const MAP_ID='frozen_expanse',VIEW_KEY='elephant-track-ice-opening-viewed-v1';
