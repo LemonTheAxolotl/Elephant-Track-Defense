@@ -1,4 +1,3 @@
-// Heater support tower: a non-attacking warmth field for Snow-Capped freezes.
 (function(root){
   'use strict';
   const heaterUI={buy:document.querySelector('#buyHeater'),price:document.querySelector('#heaterPrice')};
@@ -6,9 +5,6 @@
   let backlashEffects=[];
   heaterUI.price.textContent=CONFIG.heaterCost;
   function isHeater(tower){return tower?.towerType===HEATER_TYPE}
-  // Heaters share the tower collection for placement and support-radius
-  // bookkeeping, but they are buildings.  Repair any legacy special-orb
-  // movement state before it can displace the structure or consume an orb slot.
   function normalizeHeater(tower){
     if(!isHeater(tower))return tower;
     tower.kind='support';
@@ -23,8 +19,6 @@
   }
   function normalizeHeaters(){for(const tower of state.towers||[])normalizeHeater(tower)}
   function heaterRadius(tower){return CONFIG.HEATER_RADII[Math.max(0,Math.min(CONFIG.HEATER_RADII.length-1,(tower?.level||1)-1))]}
-  // Protection uses the same world-space center and radius as the visible
-  // warmth circle.  A tower's artwork/range must not make it lose warmth.
   function strongestHeater(tower){return state.towers.filter(heater=>isHeater(heater)&&!heater.sold&&Number.isFinite(heater.x)&&Number.isFinite(heater.y)&&Math.hypot(tower.x-heater.x,tower.y-heater.y)<=heater.radius).sort((a,b)=>b.level-a.level||Math.hypot(a.x-tower.x,a.y-tower.y)-Math.hypot(b.x-tower.x,b.y-tower.y))[0]||null}
   function heaterWarmthLevel(tower){return tower?.kind==='elephant'&&!isHeater(tower)&&tower.towerType!=='flame'&&!tower.sold&&state.towers.includes(tower)?strongestHeater(tower)?.level||0:0}
   function heaterFootprintProtected(tower){return heaterWarmthLevel(tower)>0}
@@ -36,8 +30,6 @@
   const heaterApplyStatsBase=applyLevelStats;applyLevelStats=function(tower){if(!isHeater(tower))return heaterApplyStatsBase(tower);tower.damage=0;tower.attackSpeed=Infinity;tower.radius=heaterRadius(tower);tower.cooldown=Infinity;tower.attack=0;tower.visualTarget=null};
   const heaterUpgradeCostBase=upgradeCost;upgradeCost=function(tower){return isHeater(tower)?Math.ceil(CONFIG.HEATER_BASE_UPGRADE_COST*Math.pow(CONFIG.HEATER_UPGRADE_COST_MULTIPLIER,tower.level-1)):heaterUpgradeCostBase(tower)};
   const heaterCanTargetBase=canTowerTarget;canTowerTarget=function(tower,orb){return !isHeater(tower)&&heaterCanTargetBase(tower,orb)};
-  // Explicitly keep support buildings out of every Food/Fume/Engineer target
-  // pass, including scans that refill a Fume Orb after a new tower is placed.
   const heaterAffectElephantsBase=affectElephants;
   affectElephants=function(orb){
     const heaters=(state.towers||[]).filter(tower=>isHeater(tower)&&!tower.sold),availability=heaters.map(tower=>[tower,tower.unavailable]);
