@@ -1,4 +1,3 @@
-/* Engineer Orbs leave the track only long enough to burrow a tile, then resume at their saved path position. */
 function engineerDigTarget(){
   const tiles=state.floorTiles||[],mines=tiles.filter(tile=>tile.level===2),normal=tiles.filter(tile=>tile.level===0),reinforced=tiles.filter(tile=>tile.level===1);
   let tile=mines[0]||normal[Math.floor(gameRandom()*Math.max(1,normal.length))]||reinforced[Math.floor(gameRandom()*Math.max(1,reinforced.length))];
