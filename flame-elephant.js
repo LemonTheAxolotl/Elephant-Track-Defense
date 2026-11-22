@@ -1,4 +1,3 @@
-// Flame Elephant: persistent tower data with runtime-only burn and heat effects.
 (function(root){
   'use strict';
   const definition=root.GameContent.indexes.towers.flame_elephant;
