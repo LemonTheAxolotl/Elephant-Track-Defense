@@ -1,4 +1,3 @@
-// Cutscene-only actors and action clock. No gameplay targets, damage, or rewards.
 (function(root){
   'use strict';
   const SHIELD=Object.freeze({fireAt:.8,flight:.34,impactAt:1.14,crackAt:1.37,breakAt:1.97,shieldGoneAt:2.97,defeatEnd:3.55});
