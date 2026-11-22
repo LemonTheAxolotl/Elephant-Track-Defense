@@ -23,7 +23,6 @@ for(const [width,height] of [[1100,650],[980,620],[390,780],[320,568],[844,390]]
     }
   }
 }
-// A moving actor is followed continuously, while a safe side stays stable.
 const f=fixture(1100,650,80);let lastLeft;
 for(let x=300;x<600;x+=2){
   const result=p.place(f.scene,f.speech,{id:'moving',bounds:p.rect(x,330,80,90)},f.controls,'same-line');
