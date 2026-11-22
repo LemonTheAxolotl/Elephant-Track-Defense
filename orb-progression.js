@@ -1,4 +1,3 @@
-// Metallic orb progression values are authored in data/orbs.json.
 (function(root){
   'use strict';
   if(!root.GameContent?.orbs)throw new Error('Validated orbs.json must load before orb-progression.js');
