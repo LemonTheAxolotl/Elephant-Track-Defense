@@ -2,8 +2,7 @@ const assert = require('node:assert/strict');
 global.GameContent=require('./test-content.js');
 const orbs = require('./orb-progression.js');
 
-// Mirrors the centralized early-game balance values in game.js. This is a
-// deterministic strong-placement scenario, not a replacement for game logic.
+
 const BALANCE = Object.freeze({
   tier0HP: 44,
   laterTierBaseHP: 50,
