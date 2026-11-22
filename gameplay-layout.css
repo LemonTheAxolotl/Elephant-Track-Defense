@@ -1,4 +1,3 @@
-/* No overrides means the original responsive layout, including the mobile drawer. */
 .reset-layout{flex:none;min-height:32px;padding:0 8px;border:1px solid #4d7580;border-radius:4px;background:#10262e;color:#cce8ed;font:700 9px Inter;cursor:pointer;white-space:nowrap}
 .layout-resize-handle{display:none;touch-action:none;user-select:none;-webkit-user-select:none}
 .reset-layout:focus-visible,.layout-resize-handle:focus-visible{outline:2px solid #8eefff;outline-offset:-2px}
