@@ -1,4 +1,3 @@
-// Gameplay-only preferences. Responsive defaults are always derived with overrides removed.
 (function(root){
   'use strict';
   const shell=document.querySelector('.game-shell'),header=shell?.querySelector('.top-hud'),play=shell?.querySelector('.play-area'),sidebar=play?.querySelector('aside'),reset=document.querySelector('#resetGameplayLayout'),heightHandle=document.querySelector('#hudHeightHandle'),widthHandle=document.querySelector('#sidebarWidthHandle');
