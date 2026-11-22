@@ -1,4 +1,3 @@
-// Generates the file:// fallback bundle from the editable JSON content files.
 const fs=require('node:fs');
 const path=require('node:path');
 const names=['maps','orbs','towers','achievements','tutorial','waves','difficulties'];
