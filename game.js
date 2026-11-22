@@ -1,6 +1,3 @@
-// ================================================================
-// Validated content configuration loaded from data/*.json.
-// ================================================================
 if(!globalThis.GameContent?.config)throw new Error('Validated game content must load before game.js');
 const CONFIG=globalThis.GameContent.config;
 const SESSION_SPECIAL_SEED=(CONFIG.SPECIAL_ORB_RANDOM_SEED^Date.now()^Math.floor(Math.random()*0xffffffff))>>>0;
