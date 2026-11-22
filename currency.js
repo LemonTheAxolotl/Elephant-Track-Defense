@@ -1,4 +1,3 @@
-/* Safe scientific currency for debug grants beyond JavaScript's numeric range. */
 const LARGE_CURRENCY_MAX_EXPONENT='1000000000000000',LARGE_CURRENCY_SENTINEL=1e308;
 function canonicalExponent(raw){const clean=String(raw||'');if(!/^\d+$/.test(clean))return null;return clean.replace(/^0+(?=\d)/,'')||'0'}
 function exponentWithinLimit(exponent){return exponent.length<LARGE_CURRENCY_MAX_EXPONENT.length||(exponent.length===LARGE_CURRENCY_MAX_EXPONENT.length&&exponent<=LARGE_CURRENCY_MAX_EXPONENT)}
